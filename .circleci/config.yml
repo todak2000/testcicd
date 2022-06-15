@@ -60,7 +60,7 @@ jobs:
           name: Test job
           # Fail the job intentionally to simulate an error.
           command:  return 1
-      # - destroy_environment  
+      - destroy_environment  
   # smoke_test:
   #   docker:
   #     - image: alpine:latest
@@ -77,9 +77,10 @@ jobs:
   #           else
   #             return 1
   #           fi
+  #       - destroy_environment
 workflows:
   # Name the workflow
   myWorkflow:
     jobs:
       - create_infrastructure
-      # - smoke_test
+      - smoke_test
