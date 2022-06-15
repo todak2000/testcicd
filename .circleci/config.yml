@@ -24,9 +24,9 @@ jobs:
       - image: python:3.7-alpine3.11
     steps:
       - checkout
-      - add_ssh_keys:
-              # #You can get this ID in the section where you registered the SSH Key
-              fingerprints: ["8b:e2:c7:91:3e:ed:c5:5e:f9:d0:57:c4:76:53:b4:c7"] 
+      # - add_ssh_keys:
+      #         # #You can get this ID in the section where you registered the SSH Key
+      #         fingerprints: ["8b:e2:c7:91:3e:ed:c5:5e:f9:d0:57:c4:76:53:b4:c7"] 
       - run:
           name: Install Ansible
           command: |
@@ -36,7 +36,7 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             # Your command
-            ansible-playbook -i inventory main.yml
+            ansible-playbook -i inventory main.yml excercise/todakKeyPair.pem
 workflows:
   # Name the workflow
   myWorkflow:
