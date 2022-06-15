@@ -36,7 +36,7 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             # Your command
-            ansible-playbook -i inventory main.yml /excercise/todakKeyPair.pem
+            ansible-playbook -i inventory main.yml todakKeyPair.pem
 workflows:
   # Name the workflow
   myWorkflow:
