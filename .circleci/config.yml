@@ -21,7 +21,7 @@ jobs:
       #           --region us-east-1
   create_infrastructure: 
     docker:
-      - image: python:3.7-alpine:latest
+      - image: alpine:latest
     steps:
       - checkout
       # - add_ssh_keys:
